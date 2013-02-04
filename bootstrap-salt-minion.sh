@@ -552,9 +552,9 @@ install_ubuntu_deps() {
         __apt_get_noinput python-software-properties
     fi
     if [ $DISTRO_VERSION_NO_DOTS -lt 1110 ]; then
-        add-apt-repository ppa:saltstack/salt
+        add-apt-repository ppa:balboah/salt
     else
-        add-apt-repository -y ppa:saltstack/salt
+        add-apt-repository -y ppa:balboah/salt
     fi
     apt-get update
 }
@@ -563,7 +563,7 @@ install_ubuntu_1110_deps() {
     apt-get update
     __apt_get_noinput python-software-properties
     add-apt-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ oneiric universe'
-    add-apt-repository -y ppa:saltstack/salt
+    add-apt-repository -y ppa:balboah/salt
     apt-get update
 }
 
